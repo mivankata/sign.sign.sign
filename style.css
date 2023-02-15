@@ -1,0 +1,328 @@
+html,
+body {
+  margin-bottom: 60px;
+  margin-top: 20px;
+  padding: 0;
+  background: black;
+  font-family: "Syne Mono", monospace;
+  color: white;
+  overflow-x: hidden;
+}
+
+#you {
+  color: white;
+  font-size: 12vw;
+  line-height: 11vw;
+  font-style: regular;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: glow 0.8s ease-in-out infinite alternate;
+}
+#title {
+  font-size: 30px;
+  margin-bottom: -8px;
+}
+#subtitle {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+      0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+  }
+}
+
+table {
+  width: 360px;
+  height: 20px;
+  font-size: 40px;
+  line-height: 60px;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.table-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 668px) {
+
+  table {
+    width: 360px;
+    height: 20px;
+    font-size: 40px;
+    overflow-x: none;
+    margin: 0 auto;
+    table-layout: fixed;
+  }
+  #you {
+    font-size: 20vw;
+    line-height: 20vw;
+  }
+  #title {
+    font-size: 5vw;
+  }
+  #subtitle {
+    font-size: 5vw;
+  }
+}
+
+td {
+  border: 2px solid white;
+  background-color: black;
+  text-align: center;
+}
+
+.empty {
+  background-color: white;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+}
+.letter {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+  opacity: 0%;
+}
+
+@media only screen and (max-width: 668px) {
+  #table {
+    font-size: 50px;
+    height: 80vw;
+    width: 80vw;
+    overflow-x: none;
+    margin: 4vw;
+  }
+  table {
+    width: 100%;
+    height: 20%;
+    margin: 0 auto;
+    table-layout: fixed;
+  }
+  #you {
+    font-size: 20vw;
+    line-height: 20vw;
+  }
+  #title {
+    font-size: 5vw;
+  }
+  #subtitle {
+    font-size: 5vw;
+  }
+
+}
+
+#trigger {
+  height: 40px;
+  width: 180px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  background-color: black;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-family: "Syne Mono", monospace;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 0px solid transparent;
+  position: relative;
+}
+
+#trigger2 {
+  height: 40px;
+  width: 180px;
+  background-color: black;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-family: "Syne Mono", monospace;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 0px solid transparent;
+}
+
+
+#trigger3 {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-family: "Syne Mono", monospace;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 0px solid transparent;
+}
+
+ #trigger, #trigger2, #trigger3:hover {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+}
+  
+
+
+
+/* POPUP CHATGPT */
+
+/* Popup container */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Popup content */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  height: 250px;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+  -webkit-animation-name: animatefadein;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatefadein;
+  animation-duration: 0.3s;
+}
+
+/* Popup container */
+.popup2 {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Popup content */
+.popup2-content {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: enter;
+  width: 300px;
+  height: 570px;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+  -webkit-animation-name: animatefadein;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatefadein;
+  animation-duration: 0.3s;
+}
+
+#popuptext-1,
+#popup2text-1 {
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+}
+
+.image-container {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+#cheatsheet {
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 90%;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatefadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animatefadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  margin-top: 50px;
+  margin-bottom: 200px;
+  display: none;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+}
+
+#target_top {
+  animation: move-right-left 14s linear infinite;
+  white-space: nowrap;
+}
+#target_bottom {
+  animation: move-left-right 14s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes move-right-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move-left-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.wrapper1,
+.wrapper2 {
+  z-index: 20;
+  overflow: hidden;
+  width: 100%;
+  background-color: black;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 13px rgb(255, 0, 255),
+    0 0 10px #e60073, 0 0 20px #FF0080, 0 0 0px #e60073, 0 0 70px #e60073;
+}
+.wrapper1 {
+  position: fixed;
+  top: 0px;
+}
+.wrapper2 {
+  position: fixed;
+  bottom: 0px;
+}
